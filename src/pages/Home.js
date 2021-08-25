@@ -1,10 +1,8 @@
 
-import Header from "../partials/Header.js"
-
 const Home = _ => {
   return (
     <>
-      <Header />
+      <h1>Home</h1>
     </>
   )
 }
