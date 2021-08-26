@@ -11,8 +11,8 @@ import TemplatePage from "./templates/Page.js"
 
 const App = _ => {
   return(
-    <TemplateDefault>
-      <Router>
+    <Router>
+      <TemplateDefault>
         <Switch>
           <Route exact path="/">
             <TemplatePage title="Página Inicial" Component={Home}/>
@@ -21,8 +21,8 @@ const App = _ => {
             <TemplatePage title="Clientes" Component={Customers}/>
           </Route>
         </Switch>
-      </Router>
-    </TemplateDefault>
+      </TemplateDefault>
+    </Router>
   )
 }
 
