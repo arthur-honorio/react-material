@@ -28,15 +28,26 @@ const Customers = () => {
       })
   }, [])
 
+  const handleRemoveCustomer = id => {
+    axios.delete(`https://reqres.in/api/users/${id}`)
+      .then( _ => {
+        const newCustomersState = customers.filter(customer => customer.id !== id)
+        setCustomers(newCustomersState)
+      }
+    )
+  }
+
   return(
     <Grid container>
       {customers.map( customer => (
-        <Grid item xs={4}>
+        <Grid item key={customer.id}  xs={4}>
           <CustomersCard 
+          id={customer.id}
           name= {`${customer.first_name} ${customer.last_name}`}
           email= {customer.email}
           avatar= {customer.avatar} 
           className= {classes.card}
+          onRemoveCustomer={handleRemoveCustomer}
           />
         </Grid>
       ))}

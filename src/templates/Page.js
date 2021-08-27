@@ -1,10 +1,10 @@
-import {makeStyles} from "@material-ui/core/styles"
+// import {makeStyles} from "@material-ui/core/styles"
 import { Typography }  from "@material-ui/core"
 
-const useStyles = makeStyles({})
+// const useStyles = makeStyles({})
 
 const Page = ({ title, Component }) => {
-  const classes = useStyles()
+  // const classes = useStyles()
   return (
     <>
       <Typography variant="h3">
